@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Activity</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+	<!-- Added link to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+
+	<!-- Added link to moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<style>
+
+  	table { 
+    table-layout:fixed; width: 100%;
+  	};
+  	
+
+  	</style>
+
+</head>
+<body>
+
+<div class="container">
+
+	<!-- Jumbotron-->
+	<div class="jumbotron" style="background-color: #0489B1; color: white;">
+		<h1 class="text-center"><strong></i>Train Activity</strong></h1>
+		<h3 class="text-center"><strong></i>Don't Miss that Train!!</strong></h3>
+	</div>
+
+	<!-- Current Train Schedule Row -->
+	<div class="row">
+		<div class="col-sm-12">
+		<br>
+			<!--Trian Schedule Panel -->
+			<div class="panel panel-primary">
+
+				<!--Displays Heading-->
+				<div class="panel-heading" style="background-color: #585858">
+					<h3 class="panel-title" style="background-color: #585858"><strong>Current Train Schedule</strong></h3>
+				</div>
+
+				<!--Displays train information in a table-->
+				<div class="panel-body" style="background-color: #D8D8D8">
+					<table class= "table" id="tableHeader"></table>
+					<table class= "table" id="trainTable"></table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- This row is for showing all the Train schedule-->
+	<div class="row">
+		<div class="col-sm-12">
+		<br>
+			<!-- Add Train row -->
+			<div class="panel panel-primary" style="background-color: #BDBDBD">
+				<div class="panel-heading" style="background-color: #585858">
+					<h3 class="panel-title"><strong>Add Train</strong></h3>
+				</div>
+				<div class="panel-body">
+ 
+					<!-- add train form-->
+					<form role="form">
+
+				  	  <!-- train name parameter -->
+					  <div class="form-group">
+					    <label>Train Name:</label>
+					    <input type="text" class="form-control" id="trainName">
+					  </div>
+
+					  <!-- destination parameter  -->
+					  <div class="form-group">
+					    <label>Destination:</label>
+						<input type="text" class="form-control" id="trainDestination">		  
+					  </div>
+
+				  	  <!-- first train time parameter-->
+					  <div class="form-group">
+					    <label>First Train Time (HH:mm - military time):</label>
+					    <input type="text" class="form-control" id="firstTrainTime">
+					  </div>
+
+				  	  <!-- frequency parameter -->
+					  <div class="form-group">
+					    <label>Frequency (min):</label>
+					    <input type="text" class="form-control" id="trainFrequency">
+					  </div>
+
+					  <!--submit button -->
+					  <button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
+  					  <!-- <button type="button" class="btn btn-default" id="clearAll">Clear Results</button> -->
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="logic.js"></script>
+
+<script>
+
+
+</script>
